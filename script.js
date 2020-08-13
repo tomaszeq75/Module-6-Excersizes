@@ -204,7 +204,7 @@ let promise = new Promise((resolve, reject) => {
             lastName: "Woł"
         });
         reject("Coś poszło nie tak");
-    }, 1000)
+    }, 1500)
 });
 
 promise.then((response) => {
@@ -213,3 +213,5 @@ promise.then((response) => {
 }).catch((error) => {
     console.log(error);
 })
+
+console.log("wywołane po wykonane przed");
