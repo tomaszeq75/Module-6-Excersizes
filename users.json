@@ -1,0 +1,66 @@
+{
+    "results": [
+        {
+            "gender": "female",
+            "name": {
+                "title": "Miss",
+                "first": "Jessica",
+                "last": "Horton"
+            },
+            "location": {
+                "street": {
+                    "number": 1085,
+                    "name": "The Green"
+                },
+                "city": "Newry",
+                "state": "Gwynedd County",
+                "country": "United Kingdom",
+                "postcode": "OG17 8UU",
+                "coordinates": {
+                    "latitude": "11.6735",
+                    "longitude": "123.9061"
+                },
+                "timezone": {
+                    "offset": "+1:00",
+                    "description": "Brussels, Copenhagen, Madrid, Paris"
+                }
+            },
+            "email": "jessica.horton@example.com",
+            "login": {
+                "uuid": "76471e97-f669-4037-a675-85fe84a5669c",
+                "username": "greenleopard400",
+                "password": "jello",
+                "salt": "xzKalD5z",
+                "md5": "20a3e2b410b3f36554f5697d1e4c3679",
+                "sha1": "bd2a42a207b174cc5e9e9b25211fc5688aa15b27",
+                "sha256": "ba5a4fd8f23f6ceb983a2a5307fe51ed18c17c155a4eef6f6a8c5be7ca5af9c4"
+            },
+            "dob": {
+                "date": "1997-05-26T10:37:25.200Z",
+                "age": 23
+            },
+            "registered": {
+                "date": "2018-07-18T13:46:06.785Z",
+                "age": 2
+            },
+            "phone": "016974 26834",
+            "cell": "0716-478-303",
+            "id": {
+                "name": "NINO",
+                "value": "LR 14 62 71 S"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/50.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/50.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/50.jpg"
+            },
+            "nat": "GB"
+        }
+    ],
+    "info": {
+        "seed": "ccdb4fb38215e246",
+        "results": 1,
+        "page": 1,
+        "version": "1.3"
+    }
+}

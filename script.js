@@ -197,21 +197,45 @@ let fruits = ["apple", "banana", "orange", "cherries", "jackfruit", "guava"];
  * promises
  */
 
-let promise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve({
-            firstName: "Tomasz",
-            lastName: "Woł"
-        });
-        reject("Coś poszło nie tak");
-    }, 1500)
-});
+// let promise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve({
+//             firstName: "Tomasz",
+//             lastName: "Woł"
+//         });
+//     }, 1500)
+//     reject("Coś poszło nie tak");
+// });
 
-promise.then((response) => {
-    console.log("minęła 1 sek");
-    console.log(response);
-}).catch((error) => {
-    console.log(error);
-})
+// promise.then((response) => {
+//     console.log("minęła 1 sek");
+//     console.log(response);
+// }).catch((error) => {
+//     console.log(error);
+// })
 
-console.log("wywołane po wykonane przed");
+// console.log("wywołane po wykonane przed");
+
+/**
+ * Fetching data from an API
+ */
+
+let userPromise = fetch("https://randomuser.me/api/0");
+console.log(userPromise);
+userPromise.then((response) => {
+        return response.json();
+    }).then((resData) => {
+        console.log(resData);
+    })
+    .catch((error) => {
+        console.log("wyjebało jakiś błąd: " + error);
+    });
+
+    // zabawa z danymi
+    let jsonData = {"results":[{"gender":"male","name":{"title":"Monsieur","first":"Tiago","last":"Bernard"},"location":{"street":{"number":8153,"name":"Rue Laure-Diebold"},"city":"Sevelen","state":"Jura","country":"Switzerland","postcode":5780,"coordinates":{"latitude":"-55.9930","longitude":"-20.3217"},"timezone":{"offset":"+8:00","description":"Beijing, Perth, Singapore, Hong Kong"}},"email":"tiago.bernard@example.com","login":{"uuid":"e0ddec6e-4c69-4d96-b633-b0588ec5c3fc","username":"brownelephant733","password":"hamburg","salt":"qXzK2Kzp","md5":"1403b72369263ef647b0d08c0cd39171","sha1":"fe75d4c8bfb7805e8dd774ff5fb935828d0896be","sha256":"9ae5bca63ad96ff178953e7e030f7c919bbc586dabd8048e1d138985d951a330"},"dob":{"date":"1946-05-10T00:57:20.274Z","age":74},"registered":{"date":"2008-06-07T23:03:26.938Z","age":12},"phone":"079 737 29 75","cell":"077 339 52 19","id":{"name":"AVS","value":"756.1663.2490.26"},"picture":{"large":"https://randomuser.me/api/portraits/men/50.jpg","medium":"https://randomuser.me/api/portraits/med/men/50.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/50.jpg"},"nat":"CH"}],"info":{"seed":"af08bba1fdf464da","results":1,"page":1,"version":"1.3"}}
+    names = jsonData.results[0].name;
+    n2 = jsonData.results.map(item => item.name);
+    console.log(names, n2);
+    for (const iterator in names) {
+      console.log(`${iterator}: ${names[iterator]}`);  
+    };
