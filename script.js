@@ -256,6 +256,9 @@ let bmwNoClass = {
     },
     getInfo2 : function() {
         return `${this.mark}, ${this.model} - ${this.seats} osobowy`;
+    },
+    getInfo3 : () => {
+        return `${this.mark}, ${this.model} - ${this.seats} osobowy`;
     }
 }
 
@@ -273,9 +276,12 @@ class Car {
     }
 }
 
+let bmw2 = JSON.parse(JSON.stringify(bmwNoClass));
+
+
 // let bmw = new Car('BMW', '325', 5);
-// console.log(bmwNoClass);
-// console.log(bmw);
+console.log(bmwNoClass);
+console.log(bmw2);
 
 // console.log(bmw.getInfo());
 // console.log(bmw.getInfo2());
